@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#content {
+  position: relative;
+  padding: 10px;
+  width: 100vw;
+}
+
+.playergrid {
+  display: grid;
+  width: 100%;
+  height: 40vh;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  grid-template-rows: repeat(10, minmax(0, 1fr));
+}
+
+.playergrid > div {
+  border: 0.1px solid grey;
+}
+
+.playergrid div.blueborder {
+  border-left: 2px solid blue;
+  border-right: 2px solid blue;
+}
+.playergrid div.bordertop {
+  border-top: 2px solid blue;
+}
+.playergrid div.borderbottom {
+  border-bottom: 2px solid blue;
+}
+
+.playergrid div.bluebordertop {
+  border-top: 2px solid blue;
+  border-bottom: 2px solid blue;
+}
+.playergrid div.borderleft {
+  border-left: 2px solid blue;
+}
+.playergrid div.borderright {
+  border-right: 2px solid blue;
+}
+
+#content .computergrid {
+  display: grid;
+  width: 100%;
+  height: 40vh;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  grid-template-rows: repeat(10, minmax(0, 1fr));
+}
+
+#content .computergrid > div {
+  border: 0.1px solid grey;
+}
+.column,
+.row {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  height: 20px;
+  width: 20px;
+  color: white;
+  background: green;
+  text-align: center;
+  font-weight: 750;
+  border-radius: 50%;
+}
+div[data-row][data-column] {
+  color: red;
+  text-align: center;
+  font-weight: 700;
+  font-size: 120%;
+  padding: 0px;
+}
+.playertext {
+  font-size: 200;
+  font-weight: 700;
+}
+.computertext {
+  font-size: 200;
+  font-weight: 700;
+  margin-top: 20px;
+}
